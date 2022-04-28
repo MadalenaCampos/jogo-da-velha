@@ -1,25 +1,102 @@
-<div container class="inicio">
+<div container class="inicio" *ngIf="showInicio">
   <h1>Jogo da Velha</h1>
-  <button type="button">Jogar</button>
+  <button type="button" (click)="iniciarJogo()">Jogar</button>
 </div>
 
-<div container class="tabuleiro">
+<div container class="tabuleiro" *ngIf="showTabuleiro">
+  <h1>Jogo da Velha</h1>
   <ul>
-    <li bottom right></li>
-    <li bottom right></li>
-    <li bottom></li>
-    <li bottom right></li>
-    <li bottom right></li>
-    <li bottom></li>
-    <li right></li>
-    <li right></li>
-    <li></li>
+    <li
+      bottom
+      right
+      [ngClass]="{
+        'img-x': exibirX(0, 0),
+        'img-o': exibirO(0, 0),
+        vitoria: exibirVitoria(0, 0)
+      }"
+      (click)="jogar(0, 0)"
+    ></li>
+    <li
+      bottom
+      right
+      [ngClass]="{
+        'img-x': exibirX(0, 1),
+        'img-o': exibirO(0, 1),
+        vitoria: exibirVitoria(0, 1)
+      }"
+      (click)="jogar(0, 1)"
+    ></li>
+    <li
+      bottom
+      [ngClass]="{
+        'img-x': exibirX(0, 2),
+        'img-o': exibirO(0, 2),
+        vitoria: exibirVitoria(0, 2)
+      }"
+      (click)="jogar(0, 2)"
+    ></li>
+    <li
+      bottom
+      right
+      [ngClass]="{
+        'img-x': exibirX(1, 0),
+        'img-o': exibirO(1, 0),
+        vitoria: exibirVitoria(1, 0)
+      }"
+      (click)="jogar(1, 0)"
+    ></li>
+    <li
+      bottom
+      right
+      [ngClass]="{
+        'img-x': exibirX(1, 1),
+        'img-o': exibirO(1, 1),
+        vitoria: exibirVitoria(1, 1)
+      }"
+      (click)="jogar(1, 1)"
+    ></li>
+    <li
+      bottom
+      [ngClass]="{
+        'img-x': exibirX(1, 2),
+        'img-o': exibirO(1, 2),
+        vitoria: exibirVitoria(1, 2)
+      }"
+      (click)="jogar(1, 2)"
+    ></li>
+    <!-- As classes e funções só serão executada/exibidas se entrarem nas condições -->
+    <li
+      right
+      [ngClass]="{
+        'img-x': exibirX(2, 0),
+        'img-o': exibirO(2, 0),
+        vitoria: exibirVitoria(2, 0)
+      }"
+      (click)="jogar(2, 0)"
+    ></li>
+    <li
+      right
+      [ngClass]="{
+        'img-x': exibirX(2, 1),
+        'img-o': exibirO(2, 1),
+        vitoria: exibirVitoria(2, 1)
+      }"
+      (click)="jogar(2, 1)"
+    ></li>
+    <li
+      [ngClass]="{
+        'img-x': exibirX(2, 2),
+        'img-o': exibirO(2, 2),
+        vitoria: exibirVitoria(2, 2)
+      }"
+      (click)="jogar(2, 2)"
+    ></li>
   </ul>
 </div>
 
-<div container class="fim-de-jogo">
+<div container class="fim-de-jogo" *ngIf="showFinal">
   <h1 mensagem class="vitoria">Que incrível, você venceu... 🥳🎉</h1>
   <h1 mensagem class="derrota">Lamento, mas não foi dessa vez... 🥺</h1>
   <h1 mensagem class="empate">Parabéns, ambos são o número um... 🥇🥇</h1>
-  <button>Jogar de novo</button>
+  <button type="button" (click)="novoJogo()">Jogar de novo</button>
 </div>
