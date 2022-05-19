@@ -5,7 +5,7 @@
 <img src="inicio.jpg" alt="Home do aplicativo">
 <img src="jogo-e-fim.jpg" alt="Home do aplicativo">
 
-> Jogo da velha para um jogador, contra a maquina. Jogadas da maquina controladas inteiramente pelo service, dando a possibilidade e três resultados: você vence, a maquina vence e empate.
+> Jogo da velha para um jogador, contra a maquina. Jogadas da maquina controladas inteiramente pelo service, dando a possibilidade de três resultados: você vence, a maquina vence e empate.
 
 ## 🚀 Instalando jogo-da-velha
 
