@@ -3,7 +3,7 @@
 ![GitHub language count](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 
 <img src="inicio.jpg" alt="Home do aplicativo">
-<img src="jogo-e-fim.jpg" alt="Home do aplicativo">
+<img src="jogo-e-fim.jpg" alt="Tela de jogo e de fim">
 
 > Jogo da velha para um jogador, contra a maquina. Jogadas da maquina controladas inteiramente pelo service, dando a possibilidade de três resultados: você vence, a maquina vence e empate.
 
